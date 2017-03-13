@@ -1,10 +1,209 @@
 <!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>UNL MENU</title>
 </head>
 <body>
+<nav class="navbar navbar-default" style="background-color: #c9302c">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only" >Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color: #1d1e1f">UNL Menu System</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#" style="color: #1d1e1f">* vegetarian</a></li>
+                <li><a href="#" style="color: #1d1e1f">+ Lacto</a></li>
+                <li><a href="#" style="color: #1d1e1f">- Ovo </a></li>
+                <li><a href="#" style="color: #1d1e1f">= Lacto-Ovo</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" style="color: #1d1e1f">Calender</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #1d1e1f">Dining Halls<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Selleck</a></li>
+                        <li><a href="#">CPN</a></li>
+                        <li><a href="#">Abel</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Husker Heroes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<style> #Calendar {font-family:Arial, sans-serif;}  #Calendar h1 {font-family:Arial, Helvetica, sans-serif; font-size:12.0pt; font-weight:400; margin-top:0px; margin-bottom:0px;  font-weight:normal;} .monthNoCol { width: 3.2%} .monthTxtCol { width: 10.9%;} .Sapro8916133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.5pt solid #355986; background:#F9F9E1; } .Sapro9016133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; background:#F9F9E1; } .Sapro9116133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; } .Sapro9216133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; } .Sapro9316133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; background:#F9F9E1; } .Sapro9416133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-right:1.5pt solid #355986; background:#F9F9E1; } .Sapro9516133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.5pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro9716133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.0pt solid #355986; white-space:normal;} .Sapro9916133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.0pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro10116133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; background:#D9D9D9; } .Sapro10216133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10316133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-right:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10416133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.5pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro10616133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.0pt solid #355986; white-space:normal;} .Sapro10816133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.0pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10916133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro11016133{padding-top:1px; font-size:12.0pt; font-family:Calibri, sans-serif; vertical-align:bottom; } .Sapro11116133{padding-top:1px; color:white; font-size:10.0pt; text-align:center; vertical-align:middle; border-top:1.0pt solid white; border-right:1.0pt solid white; border-left:1.5pt solid #355986; background:#355986; } .Sapro11216133{padding-top:1px; color:white; font-size:10.0pt; text-align:center; vertical-align:middle; border-top:1.0pt solid white; border-right:1.0pt solid white; border-left:1.0pt solid white; background:#355986; } .Sapro11416133{padding-top:1px; color:#003366; font-size:6.0pt; text-align:left; vertical-align:bottom; border-bottom:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro11716133{padding-top:1px; color:white; font-size:12.0pt; text-align:center; vertical-align:middle; border-bottom:1.0pt solid white; background:#355986; } .Sapro11816133{padding-top:1px; color:#CDCDCD; font-size:0.8em; text-align:right; vertical-align:bottom; border-bottom:1.0pt solid white; background:#355986; } .Sapro12016133{padding-top:1px; color:#CDCDCD; font-size:0.8em; text-align:left; vertical-align:bottom; border-bottom:1.0pt solid white; background:#355986; } </style>
+
+<table id='Calendar' data-month=201701 border=0 cellpadding=0 cellspacing=0 style='border-collapse: collapse; width:99%; table-layout:fixed;'>
+    <colgroup>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+        <col class='monthNoCol'><col class='monthTxtCol'>
+    </colgroup>
+    <tr class=Sapro11016133 height=25>
+        <td colspan=4 height=25 class=Sapro12016133 style='height:18.75pt;'><a href="http://www.wincalendar.com/Holiday-Calendar/December-2016" class="priorlink" title="December 2016"><span style='color:#CDCDCD;font-size:0.8em;font-weight: 400;font-family:Arial, sans-serif;'>Dec 2016</span></a></td>
+        <td colspan=6 class=Sapro11716133><h1 style='font-size:1.1em;'>January 2017 Calendar</h1></td>
+        <td colspan=4 class=Sapro11816133><a href="http://www.wincalendar.com/Holiday-Calendar/February-2017" class="nextlink" title="February 2017"><span style='color:#CDCDCD;font-size:0.8em;font-family: Arial, sans-serif;'>Feb 2017</span></a></td>
+    </tr>
+    <tr height=21 style='height:15.75pt'>
+        <td colspan=2 height=21 class=Sapro11116133 style='height:15.75pt'>Sun</td>
+        <td colspan=2 class=Sapro11216133 style='border-left:none'>Mon</td>
+        <td colspan=2 class=Sapro11216133 style='border-left:none'>Tue</td>
+        <td colspan=2 class=Sapro11216133 style='border-left:none'>Wed</td>
+        <td colspan=2 class=Sapro11216133 style='border-left:none'>Thu</td>
+        <td colspan=2 class=Sapro11216133 style='border-left:none'>Fri</td>
+        <td colspan=2 class=Sapro11216133 style='border-right:1.5pt solid #355986; border-left:none'>Sat</td>
+    </tr>
+    <tr height=20>
+        <td height=20 class=Sapro8916133 style='height:15.0pt'>1</td>
+        <td class=Sapro9016133> </td>
+        <td class=Sapro9116133>2</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>3</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>4</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>5</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>6</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9316133>7</td>
+        <td class=Sapro9416133> </td>
+    </tr>
+    <tr height=18>
+        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
+    </tr>
+    <tr height=20>
+        <td height=20 class=Sapro8916133 style='height:15.0pt'>8</td>
+        <td class=Sapro9016133> </td>
+        <td class=Sapro9116133>9</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>10</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>11</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>12</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>13</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9316133>14</td>
+        <td class=Sapro9416133> </td>
+    </tr>
+    <tr height=18>
+        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
+    </tr>
+    <tr height=20>
+        <td height=20 class=Sapro8916133 style='height:15.0pt'>15</td>
+        <td class=Sapro9016133> </td>
+        <td class=Sapro9116133>16</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>17</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>18</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>19</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>20</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9316133>21</td>
+        <td class=Sapro9416133> </td>
+    </tr>
+    <tr height=18>
+        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
+    </tr>
+    <tr height=20>
+        <td height=20 class=Sapro8916133 style='height:15.0pt'>22</td>
+        <td class=Sapro9016133> </td>
+        <td class=Sapro9116133>23</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>24</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>25</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>26</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>27</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9316133>28</td>
+        <td class=Sapro9416133> </td>
+    </tr>
+    <tr height=18>
+        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9716133></td>
+        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
+    </tr>
+    <tr height=20>
+        <td height=20 class=Sapro8916133 style='height:15.0pt'>29</td>
+        <td class=Sapro9016133> </td>
+        <td class=Sapro9116133>30</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro9116133>31</td>
+        <td class=Sapro9216133> </td>
+        <td class=Sapro10116133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10216133> </td>
+        <td class=Sapro10316133> </td>
+    </tr>
+    <tr height=18>
+        <td colspan=2 height=18 class=Sapro10416133 style='height:13.5pt;'></td>
+        <td colspan=2 class=Sapro10616133></td>
+        <td colspan=2 class=Sapro10616133></td>
+        <td colspan=2 class=Sapro10816133></td>
+        <td colspan=2 class=Sapro10916133> </td>
+        <td colspan=2 class=Sapro10916133> </td>
+        <td colspan=2 class=Sapro11416133 style='border-right:1.5pt solid #355986;'><a href="http://www.wincalendar.com/calendar-maker" title="Calendar Maker Software"><span style='color:#003366;font-size:6.0pt; text-decoration:none;font-family:Arial, sans-serif;'>WinCalendar</span></a></td>
+    </tr>
+
+</table>
 
 </body>
 </html>
