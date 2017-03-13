@@ -40,10 +40,19 @@
       var startDay = new Date(year, month, 1).getDay();
       var weekDay = 0;
       var row = cal.insertRow();
-      for(var _w = 0-startDay; _w < 0; w++){
+      for(var _w = 0-startDay; _w <= 0; w++){
         var c = row.insertCell(weekDay++);
-        c.innerHTML = (prevDays - _w);
+        c.innerHTML = "<p class=day>"+(prevDays + _w)+"</p>";
         c.classList.add("prev-month");
+      }
+      var days = daysInMonth(month, year);
+      for(var d = 1; d < days; d++){
+        if(weekDay == 7){
+          row = cal.insertRow();
+          weekDay = 0;
+        }
+        var cell = row.insertCell();
+        c.innerHTML = "<p class=day>"+d+"</p>";
       }
     };
     var daysInMonth = function(month, year){
