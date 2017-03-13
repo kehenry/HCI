@@ -11,7 +11,7 @@
         text-align: center;
       }
       .last-month{
-        color:#444;
+        color:#888;
       }
       </style>
 </head>
@@ -39,26 +39,30 @@
       }
       var startDay = new Date(year, month, 1).getDay();
       var weekDay = 0;
-      var row = cal.insertRow();
-      for(var _w = 0-startDay; _w <= 0; w++){
+      var row = cal.insertRow(0);
+      for(var _w = 1-startDay; _w <= 0; _w++){
         var c = row.insertCell(weekDay++);
         c.innerHTML = "<p class=day>"+(prevDays + _w)+"</p>";
         c.classList.add("prev-month");
       }
       var days = daysInMonth(month, year);
-      for(var d = 1; d < days; d++){
+      var week = 1;
+      var rr = row;
+      for(var d = 1; d <= days; d++){
         if(weekDay == 7){
-          row = cal.insertRow();
+          rr = cal.insertRow(week++);
           weekDay = 0;
         }
-        var cell = row.insertCell();
-        c.innerHTML = "<p class=day>"+d+"</p>";
+        var cell = rr.insertCell(weekDay++);
+        cell.innerHTML = "<p class=day>"+d+"</p>";
+        console.log("Added cell for "+d)
       }
     };
     var daysInMonth = function(month, year){
       return new Date(year, month+1, 0).getDate(); 
     }
-
+    var mon = new Date();
+    createCalendar(mon.getMonth(), mon.getFullYear());
   </script>
 </body>
 </html>
