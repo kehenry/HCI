@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>UNL MENU - Select Date</title>
-		<link rel="stylesheet" type="text/css" href="css/calendar.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+      thead#calendar{
+        font-size:1.2rem;
+        border-bottom: 3px solid black;
+        text-align: center;
+      }
+      .last-month{
+        color:#444;
+      }
+      </style>
 </head>
 <body>
   <table id="calendar" class="table">
@@ -13,9 +22,34 @@
   <script>
     var cal = document.getElementById("calendar");
     var h = cal.createTHead().insertRow();
-    ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'].forEach(function(day){
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    days.forEach(function(day){
       h.insertCell().innerHTML = day;
     });
+    var createCalendar = function(month, year){
+      for(var _R = 0; _R < cal.rows.length; _R++ ){
+        cal.deleteRow(_R);
+      }
+      var prevDays;
+      if(month == 0){
+        prevDays = daysInMonth(11, year-1);
+      }
+      else {
+        prevDays = daysInMonth(month-1, year);
+      }
+      var startDay = new Date(year, month, 1).getDay();
+      var weekDay = 0;
+      var row = cal.insertRow();
+      for(var _w = 0-startDay; _w < 0; w++){
+        var c = row.insertCell(weekDay++);
+        c.innerHTML = (prevDays - _w);
+        c.classList.add("prev-month");
+      }
+    };
+    var daysInMonth = function(month, year){
+      return new Date(year, month+1, 0).getDate(); 
+    }
+
   </script>
 </body>
 </html>
