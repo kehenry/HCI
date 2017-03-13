@@ -12,6 +12,58 @@
 <head>
     <meta charset="UTF-8">
     <title>UNL MENU</title>
+    <style>
+      td.day{
+        border:1px solid gray;
+        width:10vw;
+        height:8vw;
+        padding: 0px;
+      }
+      .day a{
+        text-decoration: none;
+        color:inherit;
+      }
+      thead.calendar{
+        font-weight:bold;
+        border-bottom: 3px solid black;
+        text-align: center;
+      }
+      .prev-month, 
+      .prev-month td, 
+      .prev-month p {
+        color:#888;
+        background-color:lightgrey;
+      }
+      .day-box a{
+        text-decoration: none;
+        color:inherit;
+        transition: all 0.5s;
+      }
+      .day-box:hover{
+        box-shadow: 0px 0px 10px 5px #338;
+        transition: all 0.5s;
+      }
+      .day-box{
+        width:100%;
+        height:100%;
+        padding:10px;
+        transition: all 0.5s;
+      }
+      .closed{
+        color:#1d1e1f;
+        font-weight: bold;
+        background-color:khaki;
+      }
+      .today{
+        color:white;
+        font-weight:bold;
+        background-color: red;
+      }
+      #calendar{
+        margin:auto;
+        width:100%;
+      }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-default" style="background-color: #c9302c">
@@ -51,159 +103,110 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<style> #Calendar {font-family:Arial, sans-serif;}  #Calendar h1 {font-family:Arial, Helvetica, sans-serif; font-size:12.0pt; font-weight:400; margin-top:0px; margin-bottom:0px;  font-weight:normal;} .monthNoCol { width: 3.2%} .monthTxtCol { width: 10.9%;} .Sapro8916133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.5pt solid #355986; background:#F9F9E1; } .Sapro9016133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; background:#F9F9E1; } .Sapro9116133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; } .Sapro9216133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; } .Sapro9316133{padding-top:1px; color:navy; font-size:11.0pt; font-weight:700; text-align:center; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; background:#F9F9E1; } .Sapro9416133{padding-top:1px; color:maroon; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-right:1.5pt solid #355986; background:#F9F9E1; } .Sapro9516133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.5pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro9716133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.0pt solid #355986; white-space:normal;} .Sapro9916133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-left:1.0pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro10116133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-left:1.0pt solid #355986; background:#D9D9D9; } .Sapro10216133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10316133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-top:1.0pt solid #355986; border-right:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10416133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.5pt solid #355986; background:#F9F9E1; white-space:normal;} .Sapro10616133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.0pt solid #355986; white-space:normal;} .Sapro10816133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; border-left:1.0pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro10916133{padding-top:1px; font-size:0.8em; text-align:left; vertical-align:middle; border-bottom:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro11016133{padding-top:1px; font-size:12.0pt; font-family:Calibri, sans-serif; vertical-align:bottom; } .Sapro11116133{padding-top:1px; color:white; font-size:10.0pt; text-align:center; vertical-align:middle; border-top:1.0pt solid white; border-right:1.0pt solid white; border-left:1.5pt solid #355986; background:#355986; } .Sapro11216133{padding-top:1px; color:white; font-size:10.0pt; text-align:center; vertical-align:middle; border-top:1.0pt solid white; border-right:1.0pt solid white; border-left:1.0pt solid white; background:#355986; } .Sapro11416133{padding-top:1px; color:#003366; font-size:6.0pt; text-align:left; vertical-align:bottom; border-bottom:1.5pt solid #355986; background:#D9D9D9; white-space:normal;} .Sapro11716133{padding-top:1px; color:white; font-size:12.0pt; text-align:center; vertical-align:middle; border-bottom:1.0pt solid white; background:#355986; } .Sapro11816133{padding-top:1px; color:#CDCDCD; font-size:0.8em; text-align:right; vertical-align:bottom; border-bottom:1.0pt solid white; background:#355986; } .Sapro12016133{padding-top:1px; color:#CDCDCD; font-size:0.8em; text-align:left; vertical-align:bottom; border-bottom:1.0pt solid white; background:#355986; } </style>
 
-<table id='Calendar' data-month=201701 border=0 cellpadding=0 cellspacing=0 style='border-collapse: collapse; width:99%; table-layout:fixed;'>
-    <colgroup>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-        <col class='monthNoCol'><col class='monthTxtCol'>
-    </colgroup>
-    <tr class=Sapro11016133 height=25>
-        <td colspan=4 height=25 class=Sapro12016133 style='height:18.75pt;'><a href="http://www.wincalendar.com/Holiday-Calendar/December-2016" class="priorlink" title="December 2016"><span style='color:#CDCDCD;font-size:0.8em;font-weight: 400;font-family:Arial, sans-serif;'>Dec 2016</span></a></td>
-        <td colspan=6 class=Sapro11716133><h1 style='font-size:1.1em;'>January 2017 Calendar</h1></td>
-        <td colspan=4 class=Sapro11816133><a href="http://www.wincalendar.com/Holiday-Calendar/February-2017" class="nextlink" title="February 2017"><span style='color:#CDCDCD;font-size:0.8em;font-family: Arial, sans-serif;'>Feb 2017</span></a></td>
-    </tr>
-    <tr height=21 style='height:15.75pt'>
-        <td colspan=2 height=21 class=Sapro11116133 style='height:15.75pt'>Sun</td>
-        <td colspan=2 class=Sapro11216133 style='border-left:none'>Mon</td>
-        <td colspan=2 class=Sapro11216133 style='border-left:none'>Tue</td>
-        <td colspan=2 class=Sapro11216133 style='border-left:none'>Wed</td>
-        <td colspan=2 class=Sapro11216133 style='border-left:none'>Thu</td>
-        <td colspan=2 class=Sapro11216133 style='border-left:none'>Fri</td>
-        <td colspan=2 class=Sapro11216133 style='border-right:1.5pt solid #355986; border-left:none'>Sat</td>
-    </tr>
-    <tr height=20>
-        <td height=20 class=Sapro8916133 style='height:15.0pt'>1</td>
-        <td class=Sapro9016133> </td>
-        <td class=Sapro9116133>2</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>3</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>4</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>5</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>6</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9316133>7</td>
-        <td class=Sapro9416133> </td>
-    </tr>
-    <tr height=18>
-        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
-    </tr>
-    <tr height=20>
-        <td height=20 class=Sapro8916133 style='height:15.0pt'>8</td>
-        <td class=Sapro9016133> </td>
-        <td class=Sapro9116133>9</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>10</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>11</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>12</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>13</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9316133>14</td>
-        <td class=Sapro9416133> </td>
-    </tr>
-    <tr height=18>
-        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
-    </tr>
-    <tr height=20>
-        <td height=20 class=Sapro8916133 style='height:15.0pt'>15</td>
-        <td class=Sapro9016133> </td>
-        <td class=Sapro9116133>16</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>17</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>18</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>19</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>20</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9316133>21</td>
-        <td class=Sapro9416133> </td>
-    </tr>
-    <tr height=18>
-        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
-    </tr>
-    <tr height=20>
-        <td height=20 class=Sapro8916133 style='height:15.0pt'>22</td>
-        <td class=Sapro9016133> </td>
-        <td class=Sapro9116133>23</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>24</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>25</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>26</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>27</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9316133>28</td>
-        <td class=Sapro9416133> </td>
-    </tr>
-    <tr height=18>
-        <td colspan=2 height=18 class=Sapro9516133 style='height:13.5pt;'></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9716133></td>
-        <td colspan=2 class=Sapro9916133 style='border-right:1.5pt solid #355986;'></td>
-    </tr>
-    <tr height=20>
-        <td height=20 class=Sapro8916133 style='height:15.0pt'>29</td>
-        <td class=Sapro9016133> </td>
-        <td class=Sapro9116133>30</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro9116133>31</td>
-        <td class=Sapro9216133> </td>
-        <td class=Sapro10116133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10216133> </td>
-        <td class=Sapro10316133> </td>
-    </tr>
-    <tr height=18>
-        <td colspan=2 height=18 class=Sapro10416133 style='height:13.5pt;'></td>
-        <td colspan=2 class=Sapro10616133></td>
-        <td colspan=2 class=Sapro10616133></td>
-        <td colspan=2 class=Sapro10816133></td>
-        <td colspan=2 class=Sapro10916133> </td>
-        <td colspan=2 class=Sapro10916133> </td>
-        <td colspan=2 class=Sapro11416133 style='border-right:1.5pt solid #355986;'><a href="http://www.wincalendar.com/calendar-maker" title="Calendar Maker Software"><span style='color:#003366;font-size:6.0pt; text-decoration:none;font-family:Arial, sans-serif;'>WinCalendar</span></a></td>
-    </tr>
+  <div style="width:80%;margin:auto">
+    <h3>Select a date to view</h3>
+    <p>Viewing <span id="month-label">MONTH</span></p>
+    <table id="calendar">
+      
+    </table>
+    <button id="prev-month" class="btn" onclick="prev()" style="float:left">Previous</button>
+    <button id="next-month"class="btn" onclick="next()" style="float:right">Next</button>
+  </div>
+  <script>
+    
+    var createCalendar = function(month, year){
+      document.getElementById("month-label").innerText =
+        new Date(year,month).toLocaleDateString("en-us", {month:"long"});
 
-</table>
+      var cal = document.getElementById("calendar");
+      var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      cal.innerHTML = "";
+      var head = cal.createTHead();
+      head.classList.add("calendar")
+      var h = head.insertRow(0);
+      var __i = 0;
+      days.forEach(function(day){
+        h.insertCell(__i++).innerHTML = day;
+      });
+      var today = new Date();
+      var addDay = function(row, col, day){
+        var cell = row.insertCell(col);
+        var div = document.createElement("div");
+        div.className = 'day-box';
+        div.innerHTML = day;
+        if(today.getDate() == day && today.getMonth() == month && today.getFullYear() == year){
+          cell.classList.add('today');
+          var p__ = document.createElement("p");
+          p__.innerHTML = "TODAY!"
+          p__.classList.add("day-data");
+          div.appendChild(p__)
+        }
+        if(Math.random() < 0.2){
+          cell.classList.add("closed");
+          var p_ = document.createElement("p");
+          p_.innerHTML = "CLOSED";
+          p_.classList.add("day-data");
+          div.appendChild(p_)
+        }
+        cell.classList.add("day");
+        cell.innerHTML = '<a href = "menu.html">'+div.outerHTML+"</a>";
+        return cell;
+      }
+      var prevDays;
+      if(month == 0){
+        prevDays = daysInMonth(11, year-1);
+      }
+      else {
+        prevDays = daysInMonth(month-1, year);
+      }
+      var startDay = new Date(year, month, 1).getDay();
+      var weekDay = 0;
+      var calBody = document.createElement('tbody');
+      cal.appendChild(calBody);
+      var row = calBody.insertRow(0);
+
+      for(var _w = 1-startDay; _w <= 0; _w++){
+        var c = addDay(row, weekDay++, prevDays+_w);
+        c.classList.add("prev-month");
+      }
+      var days = daysInMonth(month, year);
+      var week = 1;
+      var rr = row;
+      for(var d = 1; d <= days; d++){
+        if(weekDay == 7){
+          rr = calBody.insertRow(week++);
+          weekDay = 0;
+        }
+        addDay(rr, weekDay++,d);
+      }
+    };
+    var daysInMonth = function(month, year){
+      return new Date(year, month+1, 0).getDate(); 
+    }
+    var mon = new Date();
+    createCalendar(mon.getMonth(), mon.getFullYear());
+
+    var next = function(){
+      if(mon.getMonth() == 11){
+        mon = new Date(mon.getFullYear()+1,0);
+      }
+      else {
+        mon = new Date(mon.getFullYear(), mon.getMonth()+1);
+      }
+      createCalendar(mon.getMonth(), mon.getFullYear());
+
+    }
+    var prev = function(){
+      if(mon.getMonth() == 0){
+        mon = new Date(mon.getFullYear()-1,11);
+      }
+      else {
+        mon = new Date(mon.getFullYear(), mon.getMonth()-1);
+      }
+      createCalendar(mon.getMonth(), mon.getFullYear());
+    }
+  </script>
 
 </body>
 </html>
