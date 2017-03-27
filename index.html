@@ -79,12 +79,12 @@
         h.insertCell(__i++).innerHTML = day;
       });
       var today = new Date();
-      var addDay = function(row, col, day){
+      var addDay = function(row, col, day, thisMonth){
         var cell = row.insertCell(col);
         var div = document.createElement("div");
         div.className = 'day-box';
         div.innerHTML = day;
-        if(today.getDate() == day && today.getMonth() == month && today.getFullYear() == year){
+        if(thisMonth && today.getDate() == day && today.getMonth() == month && today.getFullYear() == year){
           cell.classList.add('today');
           var p__ = document.createElement("p");
           p__.innerHTML = "TODAY!"
@@ -116,7 +116,7 @@
       var row = calBody.insertRow(0);
 
       for(var _w = 1-startDay; _w <= 0; _w++){
-        var c = addDay(row, weekDay++, prevDays+_w);
+        var c = addDay(row, weekDay++, prevDays+_w, false);
         c.classList.add("prev-month");
       }
       var days = daysInMonth(month, year);
@@ -127,7 +127,7 @@
           rr = calBody.insertRow(week++);
           weekDay = 0;
         }
-        addDay(rr, weekDay++,d);
+        addDay(rr, weekDay++,d, true);
       }
     };
     var daysInMonth = function(month, year){
