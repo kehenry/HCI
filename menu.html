@@ -8,12 +8,20 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src= "js/menu_select.js"></script>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/calendar.css"></link>
     <style>
         div.panel{
             width: 80%;
             margin: auto;
+        }
+        img.menutype{
+            display:inline-block;
+            width:1em;
+            height:1em;
+            vertical-align: middle;
         }
     </style>
     <meta charset="UTF-8">
@@ -36,7 +44,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#" style="color: #1d1e1f">* vegetarian</a></li>
+                <li><a href="#" style="color: #1d1e1f"><img class=menutype src="images\vegan.gif" /> vegetarian</a></li>
                 <li><a href="#" style="color: #1d1e1f">+ Lacto</a></li>
                 <li><a href="#" style="color: #1d1e1f">- Ovo </a></li>
                 <li><a href="#" style="color: #1d1e1f">= Lacto-Ovo</a></li>
@@ -46,11 +54,11 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #1d1e1f">Dining Halls<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Selleck</a></li>
-                        <li><a href="#">CPN</a></li>
-                        <li><a href="#">Abel</a></li>
+                        <li><a href="#" onclick="viewMenu('Selleck')">Selleck</a></li>
+                        <li><a href="#" onclick="viewMenu('CPN')">CPN</a></li>
+                        <li><a href="#" onclick="viewMenu('Abel')">Abel</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Husker Heroes</a></li>
+                        <li><a href="#" onclick="viewMenu('Husker Heroes')">Husker Heroes</a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,7 +66,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="panel panel-default">
-    <div class="panel-heading";>Selleck Menu</div>
+    <div class="panel-heading" ><h3 id=menu-header>Selleck Menu</h3></div>
     <table class = "table">
         <tr>
             <th>
@@ -73,25 +81,25 @@
         </tr>
         <tr>
             <td>
-                cereal
+                cereal <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
                 sandwhich
             </td>
             <td>
-                soup
+                soup 
             </td>
 
         </tr>
         <tr>
             <td>
-                oats
+                oats <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
-                bread
+                bread 
             </td>
             <td>
-                corn
+                corn <img class=menutype src="images\vegan.gif" />
             </td>
 
         </tr>
@@ -100,19 +108,19 @@
                 eggs
             </td>
             <td>
-                muffin
+                muffin <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
-                sick beats
+                sick beats 
             </td>
 
         </tr>
         <tr>
             <td>
-                hash browns
+                hash browns <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
-                salad
+                salad <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
                 pudding
@@ -121,10 +129,10 @@
         </tr>
         <tr>
             <td>
-                granola
+                granola <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
-                pickles
+                pickles <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
                 roast beef
@@ -133,7 +141,7 @@
         </tr>
         <tr>
             <td>
-                pancakes
+                pancakes 
             </td>
             <td>
                 bacon
@@ -148,7 +156,7 @@
                 bacon
             </td>
             <td>
-                corn
+                corn  <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
                 pizza
@@ -160,10 +168,10 @@
                 ham
             </td>
             <td>
-                spinach
+                spinach <img class=menutype src="images\vegan.gif" />
             </td>
             <td>
-                pasta
+                pasta <img class=menutype src="images\vegan.gif" />
             </td>
 
         </tr>
